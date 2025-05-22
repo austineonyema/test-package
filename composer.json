@@ -23,7 +23,7 @@
   "extra": {
     "laravel": {
         "providers": [
-            "Austineonyema\\Providers\\PackageServiceProvider"
+            "Austineonyema\\TestPackage\\Providers\\PackageServiceProvider"
         ]
     }
 },
