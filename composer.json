@@ -1,36 +1,52 @@
 {
-  "name": "austineonyema/test-package",
-  "description": "A test package written for the Laravel app",
-  "type": "library",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "Austineonyema\\TestPackage\\": "src/"
+    "name": "austineonyema/test-package",
+    "description": "A test package written for the Laravel app",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Austineonyema\\TestPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Austine Onyema",
+            "email": "maxsunshine2@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1",
+        "illuminate/console": "^12.14",
+        "illuminate/support": "^12.15"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Austineonyema\\TestPackage\\Providers\\PackageServiceProvider"
+            ],
+            "Aliases": {
+                "Report": "Austineonyema\\TestPackage\\Facades\\Report",
+                "Greeting": "Austineonyema\\TestPackage\\Facades\\Greeting"
+            }
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.3",
+        "pestphp/pest": "^3.8"
     }
-  },
-  "authors": [
-    {
-      "name": "Austine Onyema",
-      "email": "maxsunshine2@gmail.com"
-    }
-  ],
-  "minimum-stability": "dev",
-  "require": {
-    "php": "^8.1",
-    "illuminate/console": "^12.14",
-    "illuminate/support": "^12.15"
-  },
-  "extra": {
-    "laravel": {
-        "providers": [
-            "Austineonyema\\TestPackage\\Providers\\PackageServiceProvider"
-        ]
-    }
-},
-  "prefer-stable": true,
-  "config": {
-    "sort-packages": true,
-    "preferred-install": "dist",
-    "optimize-autoloader": true
-  }
 }
