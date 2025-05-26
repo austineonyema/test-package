@@ -13,7 +13,7 @@ it('generates a greeting with a custom name', function () {
     expect($greeting->greeting())->toBe('Hello, John');
 });
 
-it('tests the output of a console command', function () {
+it('prints a message with the current timestamp to the console', function () {
     $this->artisan('test:command maxwell')
         ->expectsOutput("Hello, maxwell! Current date and time is: " . now())
         ->assertExitCode(0);
